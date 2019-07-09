@@ -44,11 +44,15 @@ function submitAnswers (){
 
      
      // Results
-     var results = document.getElementById('results');
-     results.innerHTML = '<h4> You scored <span>' + score + '</span> out of <span>' + total + '</span></h4>';  
-     //alert('You scored'+ score + 'out of' + total); 
+     //function endGame () {
+         var results = document.getElementById('results');
+         results.innerHTML = '<h4> You scored <span>' + score + '</span> out of <span>' + total + '</span></h4>';  
+         //alert('You scored'+ score + 'out of' + total); 
+         
+         return false; 
+        //}
 
-     return false; 
+     
      } 
 
 
@@ -60,15 +64,16 @@ $(document).ready(function(){
 
 
 // set timer 
-var counter = 61;
- timer = setInterval(time, 6100);
+var counter = 60;
+ timer = setInterval(time, 1000);
 
 
  function time() {
     counter --;
     $('#countDown').html(counter);
     if (counter <= 0) {
-        clearInterval(timer);
-   
+       // endGame();
 
- }} 
+        clearInterval(timer);
+    }
+   } 
