@@ -65,12 +65,10 @@ var counter = 61;
 
 
  function time() {
- counter --;
- $('#countDown').html(counter);
- if (counter <= 0) {
- results();}
- if (time === 0) {
-    clearInterval(timer);
+    counter --;
+    $('#countDown').html(counter);
+    if (counter <= 0) {
+        clearInterval(timer);
    
 
  }} 
