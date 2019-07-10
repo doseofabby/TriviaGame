@@ -77,14 +77,7 @@ var counter = 60;
     }
    } 
 
-const form = document.querySelector("form");
 
-function isChecked(rName){
-    const inputName = document.getElementsByName(rName);
-    for(i=0; i < inputName.length; i++){
-        if (inputName[i].checked) console.log(inputName[i].value);
-    }
-} 
 // when page hits zero you want it to submite whether submit button is hit or not
 // post answer data on different page ie: submission.html
 // check which radio buttons were clicked 'checked'
